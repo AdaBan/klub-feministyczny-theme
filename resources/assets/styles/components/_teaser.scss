@@ -1,60 +1,16 @@
 .teaser {
     position: relative;
-    z-index: 1;
-    align-self: start;
+    height: 100%;
+    background: red;
     border-radius: 5px;
+    border: 1px solid red;
     overflow: hidden;
-    background: #fff;
-    color: #000;
-    box-shadow: 0 0 25px 2px rgba($color-grey, 0.5);
-
-    &__image-wrapper {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-top: 75%;
-
-        &--book {
-            background: linear-gradient($blue, lighten($blue, 50%));
-        }
-
-        &--film {
-            background: linear-gradient($green, lighten($green, 50%));
-        }
-
-        &--blog {
-            background: linear-gradient($yellow, lighten($yellow, 40%));
-        }
-
-        img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.75;
-            filter: grayscale(1);
-        }
-    }
-
-    &__image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.75;
-        filter: grayscale(1);
-    }
+    box-sizing: border-box;
 
     &__text-wrapper {
         padding: 30px;
-    }
-
-    &__label {
-        margin-bottom: 10px;
+        background: #fff;
+        color: #000;
     }
 
     &__title {
@@ -78,7 +34,7 @@
     }
 
     &__details {
-        margin: 0 0 -0.333em;
+        margin: 0 0 1em;
         color: red;
         font-size: 16px;
         font-weight: 300;
