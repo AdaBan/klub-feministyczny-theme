@@ -3,6 +3,41 @@ $font-headings: "Sporting Grotesque", sans-serif;
 
 $color-grey: #bfb5af;
 
+$color-default: black;
+$color-book: red;
+$color-film: black;
+$color-blog: black;
+
+@mixin category-decor {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.25em;
+}
+
+@mixin book-decor {
+    @include category-decor;
+
+    border-radius: 50%;
+    background: $color-book;
+}
+
+@mixin film-decor {
+    @include category-decor;
+
+    background: $color-film;
+}
+
+@mixin blog-decor {
+    @include category-decor;
+
+    width: 0;
+    height: 0;
+    border-bottom: 1em solid $color-blog;
+    border-left: 1em solid transparent;
+}
+
 $standard-spacing: 15px;
 
 $grid-gutter-width: 30px;

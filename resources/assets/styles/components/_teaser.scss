@@ -1,11 +1,18 @@
 .teaser {
-    position: relative;
+    $root: &;
+
     height: 100%;
-    background: red;
-    border-radius: 5px;
-    border: 1px solid red;
-    overflow: hidden;
-    box-sizing: border-box;
+    padding-bottom: 30px;
+
+    &__inner {
+        position: relative;
+        height: 100%;
+        padding-bottom: 30px;
+        border-radius: 5px;
+        border: 1px solid $color-default;
+        background: $color-default;
+        overflow: hidden;
+    }
 
     &__text-wrapper {
         padding: 30px;
@@ -16,16 +23,6 @@
     &__title {
         margin: 0 0 20px;
         font-size: 24px;
-
-        &::before {
-            content: "";
-            display: inline-block;
-            width: 1em;
-            height: 1em;
-            border-radius: 50%;
-            margin-right: 0.25em;
-            background: red;
-        }
     }
 
     &__description {
@@ -35,7 +32,7 @@
 
     &__details {
         margin: 0 0 1em;
-        color: red;
+        color: $color-default;
         font-size: 16px;
         font-weight: 300;
         font-family: $font-headings;
@@ -43,5 +40,68 @@
 
     &__detail {
         margin: 0 0 0.333em;
+    }
+
+    &--ksiazka {
+        #{$root} {
+            &__inner {
+                background: $color-book;
+                border-color: $color-book;
+            }
+
+            &__title {
+                color: $color-book;
+
+                &::before {
+                    @include book-decor;
+                }
+            }
+
+            &__details {
+                color: $color-book;
+            }
+        }
+    }
+
+    &--film {
+        #{$root} {
+            &__inner {
+                background: $color-film;
+                border-color: $color-film;
+            }
+
+            &__title {
+                color: $color-film;
+
+                &::before {
+                    @include film-decor;
+                }
+            }
+
+            &__details {
+                color: $color-film;
+            }
+        }
+    }
+
+    &--blog {
+        #{$root} {
+            &__inner {
+                background: $color-blog;
+                border-color: $color-blog;
+            }
+
+            &__title {
+                color: $color-blog;
+
+                &::before {
+                    @include blog-decor;
+                }
+            }
+
+            &__details {
+                color: $color-blog;
+            }
+        }
     }
 }
