@@ -3,16 +3,24 @@ $font-headings: "Sporting Grotesque", sans-serif;
 
 $color-grey: #bfb5af;
 
-$color-default: black;
-$color-book: red;
-$color-film: black;
-$color-blog: black;
+$color-bg: #fff;
+$color-text: #212121;
+
+// $color-default: $color-text;
+// $color-book: #fb4225;
+// $color-film: #072261;
+// $color-blog: $color-text;
+
+$color-default: $color-text;
+$color-book: #dc4010;
+$color-film: #184d51; // #12007a
+$color-blog: $color-text; // #184d51
 
 @mixin category-decor {
     content: "";
     display: inline-block;
-    width: 1em;
-    height: 1em;
+    width: 0.9em;
+    height: 0.9em;
     margin-right: 0.25em;
 }
 

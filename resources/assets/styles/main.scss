@@ -13,6 +13,8 @@
 body {
     font-family: $font-base;
     line-height: 1.3;
+    background: $color-bg;
+    color: $color-text;
 }
 
 body * {
