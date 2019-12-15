@@ -1,44 +1,196 @@
 .post {
+    $root: &;
+
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.4;
+
+    &__details {
+        font-weight: 300;
+    }
+
+    &__header {
+        &--desktop {
+            display: none;
+        }
+    }
+
+    &__image-wrapper {
+        position: relative;
+        width: calc(100% + 30px);
+        margin: 0 -15px 2em;
+        margin-bottom: 2em;
+    }
+
+    &__image {
+        position: relative;
+        width: 100%;
+        padding-top: 120%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-blend-mode: multiply, luminosity;
+    }
+
+    &__image-caption {
+        padding: 0.5em 15px 0;
+        font-size: 0.7em;
+        line-height: 1.2;
+    }
+
+    &__decor {
+        width: 100%;
+        margin-top: 60px;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    &.category-blog {
+        #{$root} {
+            &__entry-title {
+                color: $color-blog;
+            }
+
+            &__image {
+                background-color: lighten($color-blog, 45%);
+            }
+
+            &__image-caption {
+                color: lighten($color-blog, 45%);
+            }
+
+            &__decor {
+                &::before {
+                    @include blog-decor;
+
+                    margin-right: 0;
+                    border-bottom-color: $color-blog;
+                }
+            }
+        }
+    }
+
+    &.category-ksiazka {
+        #{$root} {
+            &__entry-title {
+                color: $color-book;
+            }
+
+            &__image {
+                background-color: $color-book;
+            }
+
+            &__image-caption {
+                color: $color-book;
+            }
+
+            &__decor {
+                &::before {
+                    @include book-decor;
+
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    &.category-film {
+        #{$root} {
+            &__entry-title {
+                color: $color-film;
+            }
+
+            &__image {
+                background-color: lighten($color-film, 10%);
+            }
+
+            &__image-caption {
+                color: lighten($color-film, 10%);
+            }
+
+            &__decor {
+                &::before {
+                    @include film-decor;
+
+                    margin-right: 0;
+                }
+            }
+        }
+    }
 
     h1 {
-        margin-bottom: 30px;
-        font-size: 48px;
+        margin-bottom: 0.75em;
+        font-size: 2em;
     }
 
     h2 {
-        font-size: 36px;
-        margin-bottom: 20px;
+        margin-bottom: 0.75em;
+        font-size: 1.333em;
     }
 
     h3 {
-        font-size: 24px;
-        margin-bottom: 15px;
+        margin-bottom: 0.75em;
+        font-size: 1.2em;
     }
 
     p {
-        font-size: 20px;
-        line-height: 1.3;
-        margin-bottom: 30px;
+        margin-bottom: 2em;
+        font-size: 1em;
+        font-weight: 300;
     }
 
     b,
     strong {
-        font-weight: 700;
+        font-weight: 500;
     }
 
     em {
         font-style: italic;
     }
 
+    a {
+        border-bottom: 1px solid;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
     hr {
-        margin: 30px 0;
-        color: red;
+        margin: 1.5em 0;
+        border: none;
     }
 
     img {
         width: 100%;
         height: auto;
+    }
+
+    @media (min-width: 768px) {
+        &__header {
+            &--desktop {
+                display: block;
+            }
+
+            &--mobile {
+                display: none;
+            }
+        }
+
+        &__image-wrapper {
+            width: 100%;
+            margin: 0;
+            padding-right: 30px;
+        }
+
+        &__image-caption {
+            padding: 1em 0 0;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 20px;
     }
 }
