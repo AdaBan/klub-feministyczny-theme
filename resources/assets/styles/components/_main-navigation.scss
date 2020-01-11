@@ -44,6 +44,10 @@
             margin-right: 0.5em;
         }
     }
+
+    &.current-menu-item {
+        text-decoration: underline;
+    }
 }
 
 @media (min-width: 1240px) {
@@ -61,16 +65,3 @@
         text-align: right;
     }
 }
-
-// .current-menu-item a {
-//     border-bottom: 2px solid;
-// }
-
-// .menu-item a {
-//     border-bottom: 2px solid trasparent;
-
-//     &:hover {
-//         border-bottom: 2px solid currentColor;
-//         text-decoration: none;
-//     }
-// }

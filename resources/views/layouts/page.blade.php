@@ -4,17 +4,15 @@
   <body @php body_class() @endphp>
     @php do_action('get_header') @endphp
     @include('partials.header')
-    <div class="wrap container" role="document">
-      <div class="content">
-        <main class="row">
-            @yield('content')
-        </main>
-        @if (App\display_sidebar())
-          <aside class="sidebar">
-            @include('partials.sidebar')
-          </aside>
-        @endif
+    <div class="wrap" role="document">
+      <div class="container rich-text">
+          <main class="row content">
+        <div class="col col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+          @yield('content')
+        </div>
+      </main>
       </div>
+      
     </div>
     @php do_action('get_footer') @endphp
     @include('partials.footer')

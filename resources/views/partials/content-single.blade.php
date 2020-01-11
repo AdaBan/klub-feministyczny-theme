@@ -1,5 +1,5 @@
 <article @php post_class() @endphp>
-  <div class="col-xs-12 col-md-4">
+  <div class="col-xs-12 col-md-4 rich-text">
     <header class="post__header post__header--mobile">
         <h1 class="post__entry-title">{!! get_the_title() !!}</h1>
     </header>
@@ -12,7 +12,7 @@
     </div>
     
   </div>
-  <div class="col-xs-12 col-md-8">
+  <div class="col-xs-12 col-md-8 rich-text">
     <header class="post__header post__header--desktop">
         <h1 class="post__entry-title">{!! get_the_title() !!}</h1>
     </header>

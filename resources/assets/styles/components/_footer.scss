@@ -1,4 +1,30 @@
 .footer {
     padding: 30px 0;
-    text-align: right;
+    font-size: 1em;
+
+    &__links {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        &::after {
+            content: "/";
+            padding: 0 15px;
+        }
+
+        &:last-of-type {
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    @media (min-width: 1240px) {
+        padding: 45px 0;
+
+        &__links {
+            justify-content: flex-end;
+        }
+    }
 }
