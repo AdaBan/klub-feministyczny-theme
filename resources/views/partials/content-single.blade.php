@@ -5,12 +5,11 @@
     </header>
     <div class="post__image-wrapper">
       <div class="post__image" style="background-image: url(<?php echo get_the_post_thumbnail_url($post->ID); ?>)">
+      </div>
     </div>
     <div class="post__image-caption">
       <?php echo the_post_thumbnail_caption($post->ID); ?>
     </div>
-    </div>
-    
   </div>
   <div class="col-xs-12 col-md-8 rich-text">
     <header class="post__header post__header--desktop">
@@ -47,6 +46,12 @@
             >link</a>
         </li>
     </ul>
+    <p class="post__time">
+      Post opublikowała <?php the_author(); ?> 
+      <time>
+          <?php echo the_time('j/m/Y') ?>
+      </time>.
+    </p>
     <div class="post__decor"></div>
   </div>
 </article>

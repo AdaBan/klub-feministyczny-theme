@@ -21,8 +21,7 @@
     &__image-wrapper {
         position: relative;
         width: calc(100% + 30px);
-        margin: 0 -15px 2em;
-        margin-bottom: 2em;
+        margin: 0 -15px;
     }
 
     &__image {
@@ -36,9 +35,17 @@
     }
 
     &__image-caption {
-        padding: 0.5em 15px 0;
+        display: block;
+        padding: 1em 0 2em;
         font-size: 0.7em;
         line-height: 1.2;
+    }
+
+    &__time {
+        display: block;
+        margin: 1em 0 0 !important;
+        font-size: 1em !important;
+        font-weight: 400 !important;
     }
 
     &__decor {
@@ -139,7 +146,7 @@
         }
 
         &__image-caption {
-            padding: 1em 0 0;
+            padding: 1em 30px 0 0;
         }
     }
 }

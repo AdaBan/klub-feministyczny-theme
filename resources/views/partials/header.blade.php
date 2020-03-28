@@ -10,6 +10,7 @@
 	    <button
 	    	class="page-header__navigation-button"
 	    	data-navigationButton
+	    	aria-label="Otwórz menu"
     	>
 			<svg
 				class="page-header__navigation-icon page-header__navigation-icon--close"
@@ -39,7 +40,7 @@
   	</div>
   </div>
 </header>
-<script>
+<script type="text/javascript">
 	const $body = document.querySelector('body')
 	const $navigationButton = document.querySelector('[data-navigationButton]')
 	const $navigation = document.querySelector('[data-navigation]')
